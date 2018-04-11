@@ -1,0 +1,250 @@
+
+
+
+<html>
+<body>
+
+<h1> Creating a script </h1>
+<script>
+
+
+
+var person = {
+	name:"Sully" 
+};
+
+
+document.write(person.name);
+window.alert(person.name);
+
+</script>
+
+<h1> Function1 Square </h1>
+
+<script>
+
+  function square(y) {
+ var x = y * y;
+  document.write(x);
+	
+};
+square(4);
+
+
+</script>
+
+<h1> Function2 sum of 3 numbers </h1>
+
+<script> 
+
+function sum(a,b,c) {
+	var x = a+b+c;
+	document.write(x);
+
+};
+sum(1,2,3);
+
+</script>
+
+<h1> Variable2  creating a person </h1>
+
+<script> 
+
+var person = {
+name:"suleman", age:23, occupation:"consultant"
+
+};
+document.write(person.name +"<br>"); 
+document.write(person.age +"<br>"); 
+document.write(person.occupation);
+
+
+</script>
+
+<h1> Events1 creating a html button </h1>
+
+
+
+<button onclick="eventsFunction()">click me</button>
+
+<p id="sully"></p>
+
+<script> 
+
+function eventsFunction() {
+
+	document.getElementById("sully").innerHTML = "Hello suleman";
+
+};
+
+</script>
+
+<h1> Create a button that calls a function to increase the age of a person object </h1>
+
+<button onclick="personFunction()">inreaseage</button>
+
+<p id="person"></p>
+
+<script> 
+
+var person ={
+	name: "sully",
+	age: 24,
+	occupation: "sales"
+};
+
+document.write(person.name +"<br>"); 
+document.write(person.age +"<br>"); 
+document.write(person.occupation);
+
+function personFunction() {
+	var x = document.getElementById("person").innerHTML =(person.age ++);
+}
+
+
+
+
+
+</script>
+
+
+<h1> Functions3 / Events2 create a series of textboxes and buttons </h1>
+
+
+
+
+
+<input type="text" id="nametxt" placeholder="Enter name">
+<input type="number" id="agetxt" placeholder="Enter age">
+<input type="text" id="occupationtxt" placeholder="Enter occupation">
+
+<p id="a"></p>
+<p id="b"></p>
+<p id="c"></p>
+
+<button onclick="userPerson()">Enterdetails</button>
+
+<script> 
+function userPerson() {
+
+var createPerson = {
+	name: document.getElementById("nametxt").value,
+	age: document.getElementById("agetxt").value,
+	occupation: document.getElementById("occupationtxt").value,
+
+}
+
+document.getElementById("a").innerHTML =(createPerson.name);
+document.getElementById("b").innerHTML =(createPerson.age);
+document.getElementById("c").innerHTML =(createPerson.occupation);
+
+}
+
+
+</script>
+
+<h1> String1 Create a variable </h1>
+
+<button onclick="stringFunction()">clickme</button>
+<p id="string"></p>
+
+<script> 
+function stringFunction() {
+
+	var str="My name is Elliot"
+	var result = str.toUpperCase();
+	document.getElementById("string").innerHTML= result;
+
+
+}
+
+</script>
+
+<h1> Strings2 concatenate a string and a number together, and output the result </h1>
+
+<button onclick="strIntFunction()">clickme</button>
+<p id="concat"></p>
+
+<script> 
+function strIntFunction() {
+	var str1 = "My age is";
+	var int2 = 23;
+	var result = str1.concat(" " + int2);
+	document.getElementById("concat").innerHTML = result;
+}
+	
+</script>
+	
+
+<h1> Arrays1 / Strings 3 </h1>
+<button onclick="addFunction()">AddAnimal</button>
+<button onclick="removeFunction()">RemoveAnimal</button>
+
+<p id="x"></p>
+<p id="y"></p>
+
+
+<script>
+var animals = ["dogs", "cats", "donkeys"];
+document.getElementById("x").innerHTML = animals;
+
+function addFunction() {
+	document.getElementById("x").innerHTML = animals;
+		animals.push("chicken");
+}
+
+function removeFunction() {
+	document.getElementById("y").innerHTML = animals;
+	animals.pop();
+}
+
+</script>
+
+<h1> Conditionals1 </h1>
+<button onclick="checkage()">Check Age</button>
+<p id="age"></p>
+
+
+<script> 
+
+function checkage() {
+var person = { 
+	name:"suleman", 
+	age:23, 
+	occupation:"consultant"
+};
+
+document.getElementById("age").innerHTML = Boolean(person.age >20 && person.age < 40);
+
+}
+document.write(person.name +"<br>"); 
+document.write(person.age +"<br>"); 
+document.write(person.occupation);
+
+
+</script>
+
+<h1> Iteration1 </h1>
+
+<p id="a"></p>
+
+<script> 
+
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+	
+	text += i + "\n";
+
+}
+
+
+document.getElementById("a").innerHTML = text;
+
+</script>
+
+
+
+
+</body>
+</html>
