@@ -1,0 +1,151 @@
+
+<html> 
+
+<body> 
+
+<h1> Level2 Iteration 3 Fizz Buzz </h1>
+
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 100; i++) {
+	if (i%3==0 && i%5==0)
+		text += "FizzBuzz";
+	else if (i%3==0)
+		text += "Fizz";
+	else if (i%5==0)
+		text += "Buzz";
+	else
+    text += i + "\n";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<h1> Level2 Iterartion4 </h1>
+
+<p id="iter"></p>
+
+<script> 
+
+
+var x = 87;
+
+for (i = x; i > 1; i--) {
+
+
+
+	if (x%3==0 && x > 1) {
+		 x = x/3;
+
+	document.writeln("Divide by 3:" + " " + x + "<br>")
+		
+	}
+	if (x%3 !=0 && x%3==1) {
+		x = ((x-1)/3) ;
+
+	document.writeln("subtract by 1 and Divide by 3:" + " " + x + "<br>")
+}
+	if (x%3 !=0 && x%3==2) {
+
+		x = ((x+1)/3);
+	document.writeln("Add 1 and Divide by 3:" + " " + x + "<br>")
+
+
+
+}
+
+}
+document.getElementById("iter").innerHTML = x+1;
+
+
+
+
+</script>
+
+<h1> String1 TRIPLE </h1>
+
+<p id="triple"> </p>
+
+<script> 
+
+var str = "abcmmmhnnnfhjjj";
+var len = str.length;
+var count = 0;
+
+for (i = 0; i < len-2; i++) {
+
+	var tmp = str.charAt(i);
+	if (tmp == str.charAt(i+1) && tmp == str.charAt(i+2))
+		count++;
+
+
+}
+	document.getElementById("triple").innerHTML = count;
+
+</script>
+
+
+
+
+
+
+
+<div id="div1">
+	<h1> DOM1 create paragaraph </h1>
+	<input name ="textbox1" id="textbox4" type="text" placeholder="Enter text"/>
+
+	<button onclick="createTag()">create paragraph</button>
+	 <button onclick="destroyTag()">Destroy paragraph</button>
+
+</div>
+
+<script> 
+
+
+	function createTag() {
+
+		para = document.createElement("p");
+		para.textContent = (document.getElementById('textbox4').value);
+
+		element = document.getElementById("div1");
+		element.appendChild(para);
+
+	}
+
+	function destroyTag() {
+		para.textContent = (document.getElementById('textbox4').value);
+		element.removeChild(para);
+	}
+
+
+
+</script>
+
+
+<h1> JSON </h1>
+
+
+
+<script> 
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
